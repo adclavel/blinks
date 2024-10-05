@@ -1,15 +1,13 @@
+// solana-provider.tsx
+
 'use client';
 
 import dynamic from 'next/dynamic';
-
 import { WalletError } from '@solana/wallet-adapter-base';
-import {
-  ConnectionProvider,
-  WalletProvider,
-} from '@solana/wallet-adapter-react';
+import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { ReactNode, useCallback, useMemo } from 'react';
-import { useCluster } from '../cluster/cluster-data-access';
+import { useCluster } from '../cluster/cluster-data-access'; // Adjust the path if necessary
 
 require('@solana/wallet-adapter-react-ui/styles.css');
 

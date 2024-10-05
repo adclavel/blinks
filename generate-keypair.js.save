@@ -1,0 +1,18 @@
+const { Keypair } = require('@solana/web3.js');
+const fs = require('fs');
+
+// Generate a new keypair
+const keypair = Keypair.generate();
+
+// Get the secret key as an array
+const secretKey = keypair.secretKey;
+
+// Save the secret key to a file
+fs.writeFileSync('secret-key.json', JSON.stringify(Array.from(secretKey)));
+
+console.log('New keypair generated!');
+console.log('Public Key:', keypair.publicKey.toString());
+console.log('Secret Key saved to secret-key.json');
+
+^X
+
